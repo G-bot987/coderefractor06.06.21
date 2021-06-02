@@ -3,54 +3,84 @@
     padding: 0;
     margin: 0;
 }
-
-body {
-    background-color: #d9dcd6;
-}
-
+/* restructioning of CSS in logical order*/
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
 }
-
-header h1 {
-    display: inline-block;
-    font-size: 48px;
-}
-
-header h1 .seo {
-    color: #d9dcd6;
-}
-
-header div {
+/* renamed to nav */
+nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
-
-header div ul {
+/* header div ul {
     list-style-type: none;
-}
+} was removing bullet points from unorder list only when display block was off. As display block on this command is redundent  */
 
-header div ul li {
+/* added header nav from header div */
+header nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
-
-a {
+/* navbar items */
+.navbar {
     color: #ffffff;
     text-decoration: none;
 }
 
+/* removed header */
+h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+/* removed header */
+
+
+/* changed to main */
+main {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+/* changed from benifits to article rightside */
+.Rightside {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+}
+
+h1 .seo {
+    color: #d9dcd6;
+}
+
+.benefit-lead {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+
+
+body {
+    background-color: #d9dcd6;
+}
+
+
+
 p {
     font-size: 16px;
 }
-
-.hero {
+/* changed from .hero to .background */
+.background {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
@@ -67,28 +97,6 @@ p {
 .float-right {
     float: right;
     margin-left: 25px;
-}
-
-.content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.benefits {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
-}
-
-.benefit-lead {
-    margin-bottom: 32px;
-    color: #ffffff;
 }
 
 .benefit-brand {
@@ -187,14 +195,14 @@ p {
     margin-bottom: 20px;
     font-size: 36px;
 }
-
-.footer {
+/* changed from .footer to footer */
+footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
-
-.footer h2 {
+/* changed from .footer to footer */
+footer h2 {
     font-size: 20px;
 }
