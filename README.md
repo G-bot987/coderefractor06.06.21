@@ -19,3 +19,4 @@ listed fixes
     12. changed from div hero to figure background.
     13. changed from div footer to footer
     14.changed divs in Rightside to section
+    15. deployed at https://g-bot987.github.io/coderefractor06.06.21/
