@@ -1,69 +1,98 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+p {
+    font-size: 16px;
 }
+
 /* add variables for easier formatting */
-:root{--textcolour:#ffffff;
-    --textfont:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+:root {
+    --textcolour: #ffffff;
+    --textfont: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --sectionbackgroundcolour: #0072bb;
     --sectionpadding: 50px;
-    --sectionbottommargin:20px;
-    --sectionheight:300px;
-    --sectionimgheight:200px; 
+    --sectionbottommargin: 20px;
+    --sectionheight: 300px;
+    --sectionimgheight: 200px;
     --rightsidesectionmarginbottom: 32px;
+    --rightsideimgdisplay: block;
+    --rightsideimgmargin: 10px auto;
+    --rightsideimgwidth: 150px;
+    --titleandfooterfont: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+
 /* restructioning of CSS in logical order*/
+
 header {
     padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: var(--titleandfooterfont);
     background-color: #2a607c;
-    color: var(--textcolour)} 
-    
-    h1 .seo {
-        color: #d9dcd6;
-    }
-    
-    /* renamed to nav */
-    nav {
-        padding-top: 15px;
-        margin-right: 20px;
-        float: right;
-        font-family: var(--textfont);
-        font-size: 20px;
-    }
-    /* header div ul {
-        list-style-type: none;
-    } was removing bullet points from unorder list only when display block was off. As display block on this command is redundent  */
-    
-    /* added header nav from header div */
-    header nav ul li {
-        display: inline-block;
-        margin-left: 25px;
-    }
-    /* navbar items */
-    .navbar {
-        color: var(--textcolour);
-        text-decoration: none;
-    }
-    
-    /* removed header */
-    h1 {
-        display: inline-block;
-        font-size: 48px;
-    }
-    
-    body {
-        background-color: #d9dcd6;
-    }
-    /* changed to main */
-    main {
-        width: 75%;
-        display: inline-block;
+    color: var(--textcolour)
+}
+
+h1 .seo {
+    color: #d9dcd6;
+}
+
+/* renamed to nav */
+
+nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: var(--textfont);
+    font-size: 20px;
+}
+
+/* header div ul {
+    list-style-type: none;
+} was removing bullet points from unorder list only when display block was off. As display block on this command is redundent  */
+
+/* added header nav from header div */
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+/* navbar items */
+
+.navbar {
+    color: var(--textcolour);
+    text-decoration: none;
+}
+
+/* removed header */
+
+h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+/* condensed .search-engine-optimization, .online-reputation-management and .social-media-marketing to h2*/
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+/* condensed .benefit-lead h3, .benefit-brand h3 and .benefit-cost h3 to h3*/
+h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+body {
+    background-color: #d9dcd6;
+}
+
+/* changed to main */
+
+main {
+    width: 75%;
+    display: inline-block;
     margin-left: 20px;
 }
 
 /* changed from .hero to #background */
+
 #background {
     height: 800px;
     width: 100%;
@@ -73,7 +102,55 @@ header {
     background-position: center;
 }
 
+#search-engine-optimization {
+    margin-bottom: var(--sectionbottommargin);
+    padding: var(--sectionpadding);
+    height: var(--sectionheight);
+    font-family: var(--textfont);
+    background-color: var(--sectionbackgroundcolour);
+    color: var(--textcolour);
+}
+
+#search-engine-optimization img {
+    max-height: var(--sectionimgheight);
+}
+
+#online-reputation-management {
+    margin-bottom: var(--sectionbottommargin);
+    padding: var(--sectionpadding);
+    height: var(--sectionheight);
+    font-family: var(--textfont);
+    background-color: var(--sectionbackgroundcolour);
+    color: var(--textcolour);
+}
+
+#online-reputation-management img {
+    max-height: var(--sectionimgheight);
+    float: right;
+    margin-left: 25px;
+}
+
+#social-media-marketing {
+    margin-bottom: var(--sectionheight);
+    padding: var(--sectionpadding);
+    height: var(--sectionheight);
+    font-family: var(--textfont);
+    background-color: var(--sectionbackgroundcolour);
+    color: var(--textcolour);
+}
+
+#social-media-marketing img {
+    max-height: var(--sectionimgheight);
+}
+
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+/* floatright removed and commands placed in #online-reputation-management img*/
+
 /* changed from benifits to article rightside */
+
 .Rightside {
     margin-right: 20px;
     padding: 20px;
@@ -86,29 +163,50 @@ header {
 }
 
 /* righthandside class formatting */
+
 .benefit-brand {
     margin-bottom: var(--rightsidesectionmarginbottom);
     color: var(--textcolour);
+}
+
+.benefit-brand img {
+    display: var(--rightsideimgdisplay);
+    margin: var(--rightsideimgmargin);
+    max-width: var(--rightsideimgwidth);
 }
 
 .benefit-cost {
     margin-bottom: var(--rightsidesectionmarginbottom);
     color: var(--textcolour);
 }
+
+.benefit-cost img {    
+    display: var(--rightsideimgdisplay);
+    margin: var(--rightsideimgmargin);
+    max-width: var(--rightsideimgwidth);
+}
+
 .benefit-lead {
     margin-bottom: var(--rightsidesectionmarginbottom);
     color: var(--textcolour);
 }
 
-
+.benefit-lead img {
+    display: var(--rightsideimgdisplay);
+    margin: var(--rightsideimgmargin);
+    max-width: var(--rightsideimgwidth);
+}
 /* changed from .footer to footer */
+
 footer {
     padding: 30px;
     clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: var(--titleandfooterfont);
     text-align: center;
 }
+
 /* changed from .footer to footer */
+
 footer h2 {
     font-size: 20px;
 }
@@ -117,97 +215,3 @@ footer h2 {
 
 
 
-
-
-
-
-
-
-p {
-    font-size: 16px;
-}
-
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
-
-.benefit-lead h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-#search-engine-optimization {
-    margin-bottom: var(--sectionbottommargin);
-    padding: var(--sectionpadding);
-    height: var(--sectionheight);
-    font-family: var(--textfont);
-    background-color: var(--sectionbackgroundcolour);
-    color: var(--textcolour);
-}
-#search-engine-optimization img {
-    max-height: var(--sectionimgheight);
-}
-
-#online-reputation-management {
-    margin-bottom: var(--sectionbottommargin);
-    padding: var(--sectionpadding);
-    height: var(--sectionheight);
-    font-family: var(--textfont);
-    background-color: var(--sectionbackgroundcolour);
-    color:var(--textcolour);
-}
-#online-reputation-management img {
-    max-height: var(--sectionimgheight);
-}
-
-#social-media-marketing {
-    margin-bottom: var(--sectionheight);
-    padding: var(--sectionpadding);
-    height: var(--sectionheight);
-    font-family: var(--textfont);
-    background-color: var(--sectionbackgroundcolour);
-    color: var(--textcolour);
-}
-#social-media-marketing img {
-    max-height: var(--sectionimgheight);
-}
-
-/* condensed .search-engine-optimization, .online-reputation-management and .social-media-marketing to h2*/
-h2 {margin-bottom:20px;
-font-size: 36px;
-}
