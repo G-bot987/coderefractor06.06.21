@@ -16,7 +16,9 @@ listed fixes
     9.restructed CSS to logical order.
     10.changed from div to main
     11.changed divs in main to sections
-    12. changed from div hero to figure background.
+    12. changed from div hero to image id.
     13. changed from div footer to footer
     14.changed divs in Rightside to section
     15. deployed at https://g-bot987.github.io/coderefractor06.06.21/
+    16.root added 
+    17.CSS formatted and simplified 
